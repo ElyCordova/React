@@ -28,7 +28,7 @@ function NavBar() {
           </Nav>
           <Nav>
             <Nav.Link href="#usuario">icono usuario</Nav.Link>
-            <Nav.Link eventKey={2} href="#cartWidget"><CartWidget/>
+            <Nav.Link eventKey={2} href="#cartWidget">aqui deberia verse el icono carrito <CartWidget/>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
