@@ -1,8 +1,11 @@
 import React from "react";
+import '../Title/Greetings.css';
 
 export const Greetings = (props) => {
     return(
-        <h1>{props.greeting}</h1>
+        <div className="nombre"> 
+            <h1>{props.greeting}</h1>
+        </div>
     );
 }
 
