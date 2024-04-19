@@ -2,6 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import CartWidget from '../CartWidget/CartWidget';
 
 function NavBar() {
   return (
@@ -27,8 +28,7 @@ function NavBar() {
           </Nav>
           <Nav>
             <Nav.Link href="#usuario">icono usuario</Nav.Link>
-            <Nav.Link eventKey={2} href="#carrito">
-              carrito compra
+            <Nav.Link eventKey={2} href="#cartWidget"><CartWidget/>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

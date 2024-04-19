@@ -1,7 +1,8 @@
 
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import NavBar from './Components/NavBar';
+import NavBar from './Components/NavBar/NavBar';
+import CartWidget from './Components/CartWidget/CartWidget';
 
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
     <>
       <div>
         <NavBar/>
+        <CartWidget/> 
       </div>
       
     </>
