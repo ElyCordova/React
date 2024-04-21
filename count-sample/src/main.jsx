@@ -1,10 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
+//import Contador from './Contador'
+import ItemListContainer from './ItemListContainer'
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    <ItemListContainer />
   </React.StrictMode>,
 )
