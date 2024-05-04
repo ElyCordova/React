@@ -3,6 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import CartWidget from '../CartWidget/CartWidget';
+import UserWidget from '../UserWidget/UserWidget';
 
 function NavBar() {
   return (
@@ -15,7 +16,7 @@ function NavBar() {
           <NavDropdown title="Productos" id="collapsible-nav-dropdown">
               <NavDropdown.Item href="#aceites">Aceites</NavDropdown.Item>
               <NavDropdown.Item href="#inciensos">
-                Inciensos
+                Galeas
               </NavDropdown.Item>
               <NavDropdown.Item href="#jabones">Jabónes</NavDropdown.Item>
               <NavDropdown.Divider />
@@ -27,8 +28,10 @@ function NavBar() {
             <Nav.Link href="#contacto">Contacto</Nav.Link>  
           </Nav>
           <Nav>
-            <Nav.Link href="#usuario">icono usuario</Nav.Link>
-            <Nav.Link eventKey={2} href="#cartWidget">aqui deberia verse el icono carrito <CartWidget/>
+            <Nav.Link href="#usuario"><UserWidget/>
+            </Nav.Link>
+            <Nav.Link eventKey={2} href="#cartWidget">
+              <CartWidget/>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
