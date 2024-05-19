@@ -1,29 +1,26 @@
-import React from "react";
 import { useEffect, useState } from "react";
-import ItemList from "../ItemList/ItemList";
 import arrayProductos from "../json/Productos.json";
 import Loading from "../Loading/Loading";
+import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
-
-
 
 const fetchItems = () => {
     return new Promise((resolve) => {
         setTimeout(() => {
-            resolve(arrayProductos)
+            resolve(arrayProductos);
         }, 2000)
     })
 };
 
-const ItemListContainer = () => {
-    const [items, setItems] = useState([]);
+const ItemDetailContainer = () => {
+    const [item, setItem] = useState({});
     const [loading, setLoading] = useState(true);
     const {id} = useParams();
 
     useEffect(() => {
         const fetchData = async () => {
-            const data = await fetchItems(id);
-            setItems(id ? data.filter(item => item.category == id) : data);
+            const data = await fetchItems();
+            setItem(id ? data.find(item => item.id == id) : {});
             setLoading(false);
         };
 
@@ -31,14 +28,12 @@ const ItemListContainer = () => {
     }, [id]);
 
     return (
-        <div className="container my-5">
-            <div className="row">    
+        <>
             {
-                loading ? < Loading /> : <ItemList items={ items } />
+                loading ? <Loading /> : <ItemDetail item={item} />
             }
-            </div>
-        </div>
+        </>
     )
-};
+}
 
-export default ItemListContainer;
+export default ItemDetailContainer;
